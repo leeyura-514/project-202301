@@ -1,0 +1,176 @@
+// variable
+$current-w: 1920px;
+$mobile-width: 280px;
+$tablet-width: 820px;
+$laptop-width: 1024px;
+$desktop-width: 1440px;
+$color1: #ffe200;
+
+// mixin - media
+// ~ 1023px
+@mixin mobile {
+  @media (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+// 768px ~ 1023px
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+// 1024px ~ 1919px
+@mixin laptop {
+  @media (min-width: #{$laptop-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+// 1920px ~
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+@mixin font-n($size) {
+	font-size: calc($size*0.1rem)!important;
+}
+@mixin font-56 {
+	font-size: 5.6rem!important;
+  @include mobile {
+    font-size: 3.6rem!important;
+  }
+}
+@mixin font-52 {
+	font-size: 5.2rem!important;
+  @include mobile {
+    font-size: 2rem!important;
+  }
+}
+@mixin font-40 {
+	font-size: 4rem!important;
+  @include mobile {
+    font-size: 1.8rem!important;
+  }
+}
+@mixin font-32 { 
+	font-size: 3.2rem!important;
+  @include mobile {
+    font-size: 2.4rem!important;
+  }
+}
+@mixin font-24 {
+	font-size: 2.4rem!important;
+  @include mobile {
+    font-size: 1.2rem!important;
+  }
+}
+@mixin font-22 {
+	font-size: 2.2rem!important;
+  @include mobile {
+    font-size: 1.1rem!important;
+  }
+}
+@mixin font-20 {
+	font-size: 2rem!important;
+  // @include mobile {
+  //   font-size: 1.1rem!important;
+  // }
+}
+@mixin font-18 {
+	font-size: 1.8rem!important;
+  // @include mobile {
+  //   font-size: 1.1rem!important;
+  // }
+}
+@mixin font-17 {
+	font-size: 1.7rem!important;
+  @include mobile {
+    font-size: 1.1rem!important;
+  }
+}
+@mixin font-16 {
+	font-size: 1.6rem!important;
+  // @include mobile {
+  //   font-size: 1.4rem!important;
+  // }
+}
+@mixin font-14 {
+	font-size: 1.4rem!important;
+	// @include mobile {
+  //   font-size: 1.2rem!important;
+  // }
+}
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@content;
+}
+@mixin flex-between {
+	display: flex;
+	justify-content: space-between;
+	@content;
+}
+@mixin position-center {
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin position-top {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin col-3 {
+	flex: calc(100% / 4);
+	max-width: calc(100% / 4 - 1rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1rem;
+	}
+	@include laptop() {
+		flex: calc(100% / 2);
+		max-width: calc(100% / 2 - 1rem);
+		margin-bottom: 1rem;
+	}
+}
+@mixin col-4 {
+	flex: calc(100% / 3);
+	max-width: calc(100% / 3 - 1.5rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1rem;
+	}
+	// @include laptop() {
+	// 	flex: calc(100% / 2);
+	// 	max-width: calc(100% / 2 - 1rem);
+	// 	margin-bottom: 1rem;
+	// }
+}
+@mixin col-6 {
+	flex: calc(100% / 2);
+	max-width: calc(100% / 2 - 3rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1rem;
+	}
+}
+@mixin col-8 {
+	flex: calc(100% / 1.5);
+	max-width: calc(100% / 1.5 - 1rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1rem;
+	}
+	@include laptop() {
+		flex: calc(100% / 2);
+		max-width: calc(100% / 2 - 1rem);
+		margin-bottom: 1rem;
+	}
+}

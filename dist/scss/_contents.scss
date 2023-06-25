@@ -1,0 +1,297 @@
+@import "_codeset.scss";
+
+.sc-visual {
+  .swiper {
+    position: relative;
+  }
+  .swiper-slide {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &.layer-01 {
+      background-image: url('../../images/bg/main-visual01.png');
+    }
+    &.layer-02 {
+      background-image: url('../../images/bg/main-visual02.png');
+    }
+    .common-inner {
+      position: relative;
+    }
+    a {
+      display: block;
+    }
+    .cont-box {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #fff;
+      h3 {
+        line-height: 1.3;
+        font-size: 5.6rem;
+        margin-bottom: 4rem;
+      }
+    }
+    .info-txt {
+      position: absolute;
+      right: 30px;
+      bottom: 60px;
+      @include font-14;
+      text-align: right;
+      color: #fff;
+      span {
+        display: block;
+        @include font-20;
+        margin-bottom: .4rem;
+      }
+    }
+  }
+  .swiper-control {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .control-inner {
+      max-width: 1920px;
+      margin: 0 auto;
+      height: 100%;
+      position: relative;
+    }
+    .swiper-pagination {
+      left: 3rem;
+      bottom: 5.9rem;
+      width: 6rem;
+    }
+    .swiper-pagination-bullet {
+      margin: 10px;
+    }
+    .swiper-pagination-bullet-active {
+      background: $color1;
+    }
+    .swiper-button-next:after {
+      // 하단 주석 해제하면 버튼 css사라짐!
+      // content: '';
+    }
+  }
+}
+.sc-feature {
+  margin: 3rem 0;
+  .vision-area {
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    .col-6 {
+      display: block;
+      position: relative;
+      width: 100%;
+      min-height: 91.5rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &:first-child {
+        background-image: url('../../images/bg/sc-feature-bg01.png');
+      }
+      &:nth-child(2) {
+        background-image: url('../../images/bg/sc-feature-bg02.png');
+      }
+      a {
+        display: block;
+        height: 100%;
+      }
+    }
+    .text-inner {
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .tit {
+      padding-top: 5.3rem;
+      @include font-20;
+      font-weight: 700;
+      color: $color1;
+    }
+    strong {
+      display: block;
+      margin-top: 1.6rem;
+      @include font-32;
+      font-weight: 700;
+      text-align: center;
+    }
+    .link-direct {
+      margin-top: 1.6rem;
+      font-weight: 700;
+      color: #999;
+      &::after {
+        content: '';
+        display: block;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #999;
+      }
+    }
+  }
+  .vision-video {
+    position: relative;
+    .control-btn {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 128px;
+      bottom: 50px;
+      .btn-play {
+        display: none;
+      }
+      span {
+        margin: 3px 16px 0 0;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0;
+      }
+      .ico {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+        &.play {
+          background-image: url(../../images/icon/ico-play.png);
+        }
+        &.pause {
+          background-image: url(../../images/icon/ico-pause.png);
+        }
+      }
+    }
+    &.active {
+      .control-btn {
+        .btn-play {
+          display: block;
+        }
+        .btn-pause {
+          display: none;
+        }
+      }
+    }
+
+  }
+}
+.sc-heykakao {
+  margin: 15.2rem 0;
+  .cont-wrap {
+    @include flex-between;
+  }
+  .text-area {
+    position: relative;
+    flex: calc(100% / 2);
+		max-width: calc(100% / 2 - 9rem);
+    h3 {
+      display: block;
+      margin: 4rem 0;
+      line-height: 1.3;
+      font-weight: 700;
+      .emph {
+        color: #ffd200;
+      }
+    }
+    p {
+      line-height: 1.3;
+      @include font-40;
+      font-weight: 500;
+      color:#B2B4BD;
+    }
+    .link-more {
+      display: inline-block;
+      height: 100%;
+      &::after {
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-left: 1.6rem;
+        background-image: url('../../images/icon/link-more.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain
+      }
+    }
+    .talk-bg {
+      @include position-top;
+      right: 0;
+      width: 100%;
+      height: 11.8rem;
+      background-image: url(../../images/bg/sc-heykakao-talk-bg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 0;
+    }
+    .talk-txt {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      text-align: center;
+      @include font-52;
+      font-weight: 700;
+      color: #131415;
+      z-index: 1;
+    }
+  }
+}
+.sc-service {
+  margin-bottom: 16rem;
+  .title-wrap {
+    @include flex-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    .link-all {
+      display: block;
+      line-height: 1.3;
+      @include font-14;
+      font-weight: 700;
+      color: #888;
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 5.89px;
+        height: 10px;
+        margin: 3px 0 0 8px;
+        background-image: url(../../images/icon/ico-all.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+  .card-list {
+    @include flex-between;
+    .col-4 {
+      img {
+        display: block;
+        width: 100%;
+      }
+      h4 {
+        margin: 1.6rem 0;
+        line-height: 1.6;
+        font-weight: 700;
+        @include font-18;
+        color: #333;
+      }
+      p {
+        line-height: 1.6;
+        font-weight: 500;
+        color: #888;
+      }
+    }
+  }
+}

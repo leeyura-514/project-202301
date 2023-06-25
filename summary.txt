@@ -1,0 +1,44 @@
+[프로젝트 세팅]
+
+1) css 저장 경로
+"/dist/css"
+
+2) scss 저장 경로
+"/dist/scss"
+
+3) scss 컴파일 진행
+"/dist/scss/style.scss" 파일에 각 scss 파일을 @import 하고 style.css 파일로 컴파일
+
+4) html 저장 경로
+"/html"
+
+5) 미디어파일 경로
+"/images"
+
+6) 기획서, 디자인 경로
+"/SB_디자인"
+
+7) Live Sass Compiler 셋업
+
+{
+    "editor.tabSize": 2,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveSassCompile.settings.compileOnWatch": false,	//Watch Sass 실행 시 모든 .scss 컴파일
+    "liveSassCompile.settings.watchOnLaunch": true,	//Watch Sass 자동 실행
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",   // 압축되지 않은 css 파일
+            "extensionName": ".css",
+            "savePath": "/dist/css",
+        },
+        {
+            "format": "compressed",   // 압축된 css 파일
+            "extensionName": ".min.css",
+            "savePath": "/dist/css",
+        }
+    ],
+    "liveSassCompile.settings.generateMap": true, // css.map 파일 생성
+    "liveSassCompile.settings.includeItems": [
+        "/dist/scss/*.scss"
+    ]
+}

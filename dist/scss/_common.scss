@@ -1,0 +1,89 @@
+@import "_codeset.scss";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* font styles */
+html, body {
+  font-size: 62.5%;
+	font-family: 'Pretendard', sans-serif;
+  letter-spacing: -0.01em;
+}
+body {
+  scroll-behavior: smooth;
+  &.scroll-hidden {
+    overflow: hidden;
+  }
+}
+div {
+  @include font-16;
+}
+
+/* common styles */
+.blind {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+.common-inner {
+	max-width: 1920px;
+  height: 100%;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+.flex-container {
+  display: flex;  
+  .flex-column {
+    display: flex;
+    width: 100%;
+    .col-3 {
+      @include col-3;
+    }
+    .col-4 {
+      @include col-4;
+    }
+    .col-6 {
+      @include col-6;
+    }
+    .col-8 {
+      @include col-8;
+    }
+  }
+}
+.col-6 {
+  @include col-6;
+}
+.col-4 {
+  @include col-4;
+}
+
+
+//component
+.pc-view {
+  display: flex!important;
+}
+.m-view {
+  display: none!important;
+}
+.link-more {
+  @include font-16;
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 6px;
+    border-radius: 50%;
+    background-color: $color1;
+  }
+}
+.sc-title {
+  @include font-20;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #131415;
+}
+h3 {
+  @include font-56;
+}
