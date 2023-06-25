@@ -503,6 +503,8 @@ h3 {
 }
 #footer-area .right-area .sns-box li img {
   display: block;
+  width: 2.6rem;
+  height: 2.6rem;
   vertical-align: top;
 }
 
@@ -868,6 +870,10 @@ h3 {
   #header-area .mobile-menu .sns-box ul li {
     margin-right: 0.8rem;
   }
+  #header-area .mobile-menu .sns-box ul li img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
   #header-area .mobile-menu .copyright {
     line-height: 1.2;
     font-weight: 700;
@@ -992,6 +998,10 @@ h3 {
     flex: 100%;
     padding: 0 20px;
   }
+  #footer-area .left-area .logo img {
+    width: 8.2rem;
+    height: 1.8rem;
+  }
   #footer-area .left-area .policy-box {
     margin: 4.8rem 0;
   }
@@ -1044,6 +1054,10 @@ h3 {
   #footer-area .right-area .sns-box {
     padding: 0 20px;
     margin-top: 3rem;
+  }
+  #footer-area .right-area .sns-box li img {
+    width: 3.2rem;
+    height: 3.2rem;
   }
   #footer-area .right-area .copyright {
     display: block !important;

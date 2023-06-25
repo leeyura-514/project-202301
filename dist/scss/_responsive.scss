@@ -59,6 +59,10 @@
           display: flex;
           li {
             margin-right: 0.8rem;
+            img {
+              width: 3.2rem;
+              height: 3.2rem;
+            }
           }
         }
       }
@@ -210,6 +214,10 @@
       max-width: 100%;
       flex: 100%;
       padding: 0 20px;
+      .logo img {
+        width: 8.2rem;
+        height: 1.8rem;
+      }
       .policy-box {
         margin: 4.8rem 0;
       }
@@ -266,6 +274,12 @@
       .sns-box {
         padding: 0 20px;
         margin-top: 3rem;
+        li {
+          img {
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+        }
       }
       .copyright {
         display: block!important;
