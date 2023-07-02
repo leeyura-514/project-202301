@@ -74,10 +74,6 @@
     .swiper-pagination-bullet-active {
       background: $color1;
     }
-    .swiper-button-next:after {
-      // 하단 주석 해제하면 버튼 css사라짐!
-      // content: '';
-    }
   }
 }
 .sc-feature {
@@ -215,8 +211,8 @@
       height: 100%;
       &::after {
         display: inline-block;
-        width: 3.2rem;
-        height: 3.2rem;
+        width: 32px;
+        height: 32px;
         margin-left: 1.6rem;
         background-image: url('../../images/icon/link-more.png');
         background-repeat: no-repeat;

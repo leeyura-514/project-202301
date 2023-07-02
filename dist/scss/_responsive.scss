@@ -154,13 +154,19 @@
       flex-direction: column;
       .col-6 {
         min-height: 56rem;
+        &:first-child {
+          background-image: url('../../images/bg/m-sc-feature-bg01.png');
+        }
+        &:nth-child(2) {
+          background-image: url('../../images/bg/m-sc-feature-bg02.png');
+        }
       }
       .tit {
         padding-top: 2rem;
-        font-size: 2rem!important;
+        font-size: 2rem;
       }
       .link-direct {
-        font-size: 1.6rem!important;
+        font-size: 1.6rem;
       }
     }
     .vision-video {
@@ -196,9 +202,12 @@
     }
   }
   .sc-service {
-    margin-bottom: 8rem;
+    margin-bottom: 5.4rem;
     .card-list {
       flex-direction: column;
+      .col-4:last-child {
+        margin-bottom: 0;
+      }
     }
   }
   #footer-area {
@@ -235,39 +244,52 @@
       max-width: 100%;
       flex: 100%;
       flex-direction: column;
-      .related-wrap {
-        .btn-wrap {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 20px;
-          border-bottom: 1px solid #F1F1F1;
-          .btn-add {
-            display: block;
-            height: 4.8rem;
-            font-size:1.4rem;
-            font-weight: 700;
-            color: #999;
-          }
-          .ico-open {
-            width: 32px;
-            height: 32px;
-            background-image: url('../../images/icon/icon-add.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-          }
+      .btn-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        border-bottom: 1px solid #F1F1F1;
+      }
+      .btn-add {
+        display: block;
+        height: 4.8rem;
+        font-size:1.4rem;
+        font-weight: 700;
+        color: #999;
+      }
+      .ico-open {
+        width: 32px;
+        height: 32px;
+        position: relative;
+        &::before {
+          content: "";
+          display: inline-block;
+          @include position-center;
+          width: 2px;
+          height: 16px;
+          background-color: #bdbdbd;
+          transition: .2s ease-in;
+          transition-delay: .2s;
         }
-        .related-list {
-          display: none;
-          padding: 2.4rem 20px;
-          margin-bottom: 0;
-          background-color: #fafafa;
-          li {
-            margin-bottom: 2rem;
-            &:last-child {
-              margin-bottom: 0;
-            }
+        &::after {
+          content: "";
+          display: inline-block;
+          @include position-center;
+          width: 16px;
+          height: 2px;
+          background-color: #bdbdbd;
+        }
+      }
+      .related-list {
+        display: none;
+        padding: 2.4rem 20px;
+        margin-bottom: 0;
+        background-color: #fafafa;
+        li {
+          margin-bottom: 3rem;
+          &:last-child {
+            margin-bottom: 0;
           }
         }
       }
@@ -290,6 +312,11 @@
         color: #999;
       }
     }
+    &.active {
+      .right-area .ico-open::before {
+        transform: rotate(90deg) translate(-8px, 1px);
+      }
+    }
   }
 }
 
@@ -309,16 +336,38 @@
   .m-view {
     display: none!important;
   }
+  .sc-feature {
+    .vision-area {
+      .col-6 {
+        min-height: 45.5rem;
+      }
+      .tit {
+        padding-top: 2.3rem;
+      }
+      strong {
+        font-size: 2.2rem;
+      }
+      .link-direct {
+        margin-top: 0.8rem;
+        font-size: 1.4rem;
+      }
+    } 
+  } 
   .sc-heykakao {
     .text-area {
       h3 {
-        font-size: 3.6rem!important;
+        font-size: 3.6rem;
       }
       p {
-        font-size: 1.8rem!important;
+        font-size: 3rem;
+      }
+      .link-more {
+        &::after {
+          vertical-align: bottom;
+        }
       }
       .talk-txt {
-        font-size: 2.4rem!important;
+        font-size: 2.4rem;
       }
     }
   }
@@ -334,7 +383,7 @@
     }
     .left-area {
       h3 {
-        font-size: 2.6rem!important;
+        font-size: 2.6rem;
       }
       .copyright {
         margin-top: 2rem;
@@ -356,7 +405,7 @@
     }
     .left-area {
       h3 {
-        font-size: 2.6rem!important;
+        font-size: 2.6rem;
       }
       .copyright {
         margin-top: 2rem;

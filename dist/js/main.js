@@ -10,10 +10,10 @@ $(function () {
   
   var mainSlide = new Swiper(".sc-visual .swiper", {
     loop: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".sc-visual .swiper-pagination",
       clickable : true,  // 버튼 클릭 여부

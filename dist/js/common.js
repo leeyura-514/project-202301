@@ -20,11 +20,10 @@ $(function(){
 
   // footer 관련사이트 아코디언
   const relOpen =  $('#footer-area .ico-open');
-  console.log(relOpen);
 
   relOpen.click(() => {
     $('.related-list').slideToggle();
-    // $(this).toggleClass('active');
+    $('#footer-area').toggleClass('active');
   })
 
   // 모바일 메뉴 effect
@@ -36,7 +35,7 @@ $(function(){
   })
   .from('#m-gnb li',{ //menu li 끝점 -> 시작점으로 효과
     opacity:0,
-    y:30, 
+    y:20, 
     stagger:0.2
   })
 
