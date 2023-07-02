@@ -1044,7 +1044,7 @@ h3 {
     height: 16px;
     background-color: #bdbdbd;
     transition: 0.2s ease-in;
-    transition-delay: 0.2s;
+    transition-delay: 0.3s;
   }
   #footer-area .right-area .ico-open::after {
     content: "";
